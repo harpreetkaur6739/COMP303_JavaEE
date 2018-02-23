@@ -76,7 +76,7 @@ public class Client extends JFrame
       txtCustNum = new JTextField(10);
       txtPassword = new JTextField(10);      
       txtAmount = new JTextField(10);
-      messageArea = new JTextArea(5,20);
+      messageArea = new JTextArea(5,25);
       
       btnSubmit = new JButton("Submit");     
       btnSubmit.addActionListener(

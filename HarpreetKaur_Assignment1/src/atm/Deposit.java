@@ -20,9 +20,10 @@ public class Deposit extends Transaction
       BankDatabase bankDatabase = getBankDatabase();
       // credit account to reflect the deposit
       
+     // bankDatabase.
       bankDatabase.credit(getAccountNumber(), amount); 
       
-      return "Your balance is: " + bankDatabase.getTotalBalance(getAccountNumber());
+      return "Amount: " + amount + " has been credited to your account. \n Your total balance is: " + bankDatabase.getTotalBalance(getAccountNumber());
       
    } 
 

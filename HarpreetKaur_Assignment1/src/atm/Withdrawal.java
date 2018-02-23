@@ -44,8 +44,8 @@ public class Withdrawal extends Transaction
                   cashDispenser.dispenseCash(amount); // dispense cash
 
                   // instruct user to take cash
-                 message = "\nYour cash has been dispensed. Please take your cash now.";
-                 message += "Your total balance is: " + bankDatabase.getTotalBalance(getAccountNumber());
+                 message = "\nYour cash has been dispensed.";
+                 message += "\n Your total balance is: " + bankDatabase.getTotalBalance(getAccountNumber());
                
                } // end if
                else // cash dispenser does not have enough cash

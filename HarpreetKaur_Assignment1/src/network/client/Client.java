@@ -10,7 +10,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.awt.BorderLayout;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -43,7 +45,7 @@ public class Client extends JFrame
 	
 	private JLabel lblCustNum;
 	private JLabel lblPassword;
-	private JLabel lblLoginPage;
+	private JLabel lblHomePage;
 	private JLabel lblAmount;
 	private JLabel lblOperation;
 	private JButton btnSubmit;
@@ -69,11 +71,11 @@ public class Client extends JFrame
       lblPassword = new JLabel("Password:");
       lblOperation = new JLabel("Operation:");
       lblAmount = new JLabel("Amount:");
-      lblLoginPage = new JLabel("Login");
+      lblHomePage = new JLabel("Welcome to ABC Bank");
       
-      txtCustNum = new JTextField(20);
-      txtPassword = new JTextField(20);      
-      txtAmount = new JTextField(20);
+      txtCustNum = new JTextField(10);
+      txtPassword = new JTextField(10);      
+      txtAmount = new JTextField(10);
       messageArea = new JTextArea(5,20);
       
       btnSubmit = new JButton("Submit");     
@@ -132,15 +134,18 @@ public class Client extends JFrame
       
       containerPane.setLayout(new BorderLayout());
       
-      containerPane.add(lblLoginPage, BorderLayout.NORTH);
+      containerPane.add(lblHomePage, BorderLayout.NORTH);
       containerPane.add(contentPanel, BorderLayout.CENTER); 
       containerPane.add( messageArea, BorderLayout.SOUTH);
       
-      pack();
-      
-      
+      pack();    
 	
-      setSize( 300, 250); // set size of frame
+      //setSize( 400, 250); // set size of frame
+      
+      //set location
+      Dimension screenDimension = Toolkit.getDefaultToolkit().getScreenSize();
+      setLocation(screenDimension.width/2-getSize().width/2, screenDimension.height/2-getSize().height/2);
+      
       setVisible( true ); // show window
    } 
 
